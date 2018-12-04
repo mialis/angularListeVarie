@@ -22,7 +22,8 @@ export class RecipeListComponent implements OnInit {
     new Recipe(
       "Carbonara",
       "Lorem ipsum bla bla ",
-      "https://www.informacibo.it/wp-content/uploads/2018/04/carbonara.jpg"
+      "https://www.informacibo.it/wp-content/uploads/2018/04/carbonara.jpg",
+      true
     ),
     new Recipe(
       "Amatriciana",
