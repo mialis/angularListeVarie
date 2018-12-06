@@ -1,0 +1,9 @@
+<div *ngIf="currentRecipe" class="card" style="width: 18rem;">
+  <img class="card-img-top" [src]="currentRecipe.imagePath" />
+  <div class="card-body">
+    <h5 class="card-title">{{ currentRecipe.name }}</h5>
+    <p class="card-text">{{ currentRecipe.description }}</p>
+    <app-like [isLiked]="currentRecipe.liked"></app-like>
+  </div>
+</div>
+<div *ngIf="!currentRecipe"><h3>Seleziona una ricetta nella lista</h3></div>

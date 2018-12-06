@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Output, EventEmitter } from "@angular/core";
 import { Recipe } from "./recipe.model";
 
 @Component({
@@ -31,6 +31,13 @@ export class RecipeListComponent implements OnInit {
       "http://www.sedanoallegro.it/sites/default/files/ricette/2017-10/amatriciana.jpeg"
     )
   ];
+
+  @Output() selectedRecipe = new EventEmitter<Recipe>();
+
+  onSelectedList(recipe) {
+    console.log("elemento lista selezionato", recipe);
+    this.selectedRecipe.emit(recipe);
+  }
 
   constructor() {}
 

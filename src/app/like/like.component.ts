@@ -8,8 +8,12 @@ import { Component, OnInit, Input } from "@angular/core";
 export class LikeComponent implements OnInit {
   @Input() isLiked = false;
 
-  clickedLike() {
+  clickedLike(ev: MouseEvent, numero) {
+    console.log("like cliccato!", this.isLiked);
     this.isLiked = !this.isLiked;
+
+    console.log("dopo click", this.isLiked);
+    ev.preventDefault();
   }
   constructor() {}
 

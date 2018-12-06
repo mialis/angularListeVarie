@@ -1,1 +1,3 @@
-<i [ngClass]="isLiked ? 'fas fa-star' : 'far fa-star'"></i>
+<a href="#" class="btn btn-primary" (click)="clickedLike($event, 99)">
+  <i [ngClass]="isLiked ? 'fas fa-star' : 'far fa-star'"></i> {{ isLiked }}
+</a>
